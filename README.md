@@ -2,22 +2,16 @@
 
 ## 🚀 기능 구현 목록
 
-### 1️⃣ 프로젝트 초기 설정
+### 프로젝트 초기 설정
 
-- [ ]  Layered Architecture 패키지 구조 생성
-  - [ ]  controller, service, domain, infrastructure, validator 패키지
+- [X]  Layered Architecture 패키지 구조 생성
+  - [X]  controller, service, domain, infrastructure, validator 패키지
+  - [X]  기본 클래스 정의
+  - [X]  인터페이스 정의
 
 ---
 
-### 2️⃣ Infrastructure Layer
-
-**인터페이스 정의**
-
-- [ ]  랜덤 숫자 생성 인터페이스
-- [ ]  입력 인터페이스
-- [ ]  출력 인터페이스
-
-**구현체**
+### Infrastructure Layer
 
 - [ ]  랜덤 숫자 생성 구현
 - [ ]  콘솔 입력 구현
@@ -25,7 +19,7 @@
 
 ---
 
-### 3️⃣ Domain Layer
+### Domain Layer
 
 **Car (자동차)**
 
@@ -41,7 +35,7 @@
 
 ---
 
-### 4️⃣ Validator
+### Validator
 
 **입력 검증**
 
@@ -55,7 +49,7 @@
 
 ---
 
-### 5️⃣ Service Layer
+### Service Layer
 
 **게임 진행 관리**
 
@@ -66,7 +60,7 @@
 
 ---
 
-### 6️⃣ Controller Layer
+### Controller Layer
 
 **게임 흐름 제어**
 
@@ -80,7 +74,7 @@
 
 ---
 
-### 7️⃣ Application
+### Application
 
 **객체 조립 및 실행**
 
