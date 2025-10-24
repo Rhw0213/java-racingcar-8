@@ -1,5 +1,5 @@
 package racingcar.infrastructure.io;
 
 public interface Output {
-    void printLine();
+    void printLine(final String message);
 }
