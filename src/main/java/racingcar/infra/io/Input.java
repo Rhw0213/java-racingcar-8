@@ -1,5 +1,9 @@
 package racingcar.infra.io;
 
+import camp.nextstep.edu.missionutils.Console;
+
 public interface Input {
-    String readLine();
+    static String readLine() {
+        return Console.readLine();
+    }
 }

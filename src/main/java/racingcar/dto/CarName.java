@@ -9,7 +9,7 @@ public record CarName(String name) {
             throw new IllegalArgumentException("이름은 비어있을 수 없습니다.");
         }
 
-        if (!name.matches(VALID_CHARS_PATTERN)){
+        if (!name.matches(VALID_CHARS_PATTERN)) {
             throw new IllegalArgumentException("문자외엔 다른문자가 들어올 수 없습니다.");
         }
 

@@ -1,9 +1,6 @@
-package racingcar.service;
+package racingcar.domain;
 
 import org.junit.jupiter.api.Test;
-import racingcar.domain.Car;
-import racingcar.domain.Cars;
-import racingcar.dto.CarName;
 import racingcar.infra.random.RandomNumberGenerator;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -12,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 public class CarsTest {
     @Test
     void 자동차_등록() {
-        Car car = new Car(new CarName("pobi"));
+        Car car = new Car("pobi");
         Cars cars = new Cars();
 
         cars.register(car);
@@ -30,15 +27,15 @@ public class CarsTest {
     void 중복된이름으로_등록불가() {
         Cars cars = new Cars();
 
-        cars.register(new Car(new CarName("pobi")));
-        assertThatThrownBy(() -> cars.register(new Car(new CarName("pobi"))))
+        cars.register(new Car("pobi"));
+        assertThatThrownBy(() -> cars.register(new Car("pobi")))
                 .isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
     void 자동차_이동() {
         Cars cars = new Cars();
-        Car car = new Car(new CarName("pobi"));
+        Car car = new Car("pobi");
         cars.register(car);
 
         cars.moveAll(new RandomNumberGenerator() {
@@ -55,7 +52,7 @@ public class CarsTest {
     @Test
     void 자동차_이동불가() {
         Cars cars = new Cars();
-        Car car = new Car(new CarName("pobi"));
+        Car car = new Car("pobi");
 
         cars.register(car);
 
@@ -73,9 +70,9 @@ public class CarsTest {
     void 우승자_1명() {
         Cars cars = new Cars();
 
-        Car car1 = new Car(new CarName("pobi"));
-        Car car2 = new Car(new CarName("woni"));
-        Car car3 = new Car(new CarName("jun"));
+        Car car1 = new Car("pobi");
+        Car car2 = new Car("woni");
+        Car car3 = new Car("jun");
 
         cars.register(car1);
         cars.register(car2);
@@ -92,10 +89,10 @@ public class CarsTest {
     void 우승자_여러명() {
         Cars cars = new Cars();
 
-        Car car1 = new Car(new CarName("pobi"));
-        Car car2 = new Car(new CarName("woni"));
-        Car car3 = new Car(new CarName("jun"));
-        Car car4 = new Car(new CarName("tom"));
+        Car car1 = new Car("pobi");
+        Car car2 = new Car("woni");
+        Car car3 = new Car("jun");
+        Car car4 = new Car("tom");
 
         cars.register(car1);
         cars.register(car2);

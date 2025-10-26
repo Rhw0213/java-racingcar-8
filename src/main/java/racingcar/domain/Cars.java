@@ -4,6 +4,8 @@ import racingcar.infra.random.RandomNumberGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Cars {
     private static final int FORWARD_CAN_NUMBER = 4;
@@ -28,7 +30,25 @@ public class Cars {
             throw new IllegalArgumentException("자동차 이름이 중복됩니다");
         }
 
-        cars.add(car);
+        this.cars.add(car);
+    }
+
+    public void register(final List<Car> cars) {
+        if (cars == null || cars.isEmpty()) {
+            throw new IllegalArgumentException("등록할 자동차를 추가해 주세요.");
+        }
+
+        cars.forEach(this::register);
+    }
+
+    public RoundSnapshot createSnapshot() {
+        Map<String, Integer> positions = cars.stream()
+                .collect(Collectors.toMap(
+                        Car::getName,
+                        Car::getPosition
+                ));
+
+        return RoundSnapshot.of(positions);
     }
 
     public final List<String> getWinnerCarNames() {

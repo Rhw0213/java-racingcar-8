@@ -53,30 +53,30 @@
 
 #### 게임 진행 관리
 
-&nbsp;&nbsp;\[ ] 자동차 목록 생성  
-&nbsp;&nbsp;\[ ] 한 라운드 진행 (모든 차 이동)  
-&nbsp;&nbsp;\[ ] 전체 게임 진행 (n번 라운드 반복)  
-&nbsp;&nbsp;\[ ] 우승자 결정
+&nbsp;&nbsp;\[X] 자동차 목록 생성  
+&nbsp;&nbsp;\[X] 한 라운드 진행 (모든 차 이동)  
+&nbsp;&nbsp;\[X] 전체 게임 진행 (n번 라운드 반복)  
+&nbsp;&nbsp;\[X] 우승자 결정
 
 ### Controller Layer
 
 #### 게임 흐름 제어
 
-&nbsp;&nbsp;\[ ] 자동차 이름 입력 받기  
-&nbsp;&nbsp;\[ ] 자동차 이름 검증  
-&nbsp;&nbsp;\[ ] 시도 횟수 입력 받기  
-&nbsp;&nbsp;\[ ] 시도 횟수 검증  
-&nbsp;&nbsp;\[ ] 게임 시작 및 진행  
-&nbsp;&nbsp;\[ ] 각 라운드 결과 출력  
-&nbsp;&nbsp;\[ ] 최종 우승자 출력 (쉼표로 구분)
+&nbsp;&nbsp;\[X] 자동차 이름 입력 받기  
+&nbsp;&nbsp;\[X] 자동차 이름 검증  
+&nbsp;&nbsp;\[X] 시도 횟수 입력 받기  
+&nbsp;&nbsp;\[X] 시도 횟수 검증  
+&nbsp;&nbsp;\[X] 게임 시작 및 진행  
+&nbsp;&nbsp;\[X] 각 라운드 결과 출력  
+&nbsp;&nbsp;\[X] 최종 우승자 출력 (쉼표로 구분)
 
 ### Application
 
 #### 객체 조립 및 실행
 
-&nbsp;&nbsp;\[ ] 모든 구현체 생성  
-&nbsp;&nbsp;\[ ] 의존성 주입  
-&nbsp;&nbsp;\[ ] 게임 시작
+&nbsp;&nbsp;\[X] 모든 구현체 생성  
+&nbsp;&nbsp;\[X] 의존성 주입  
+&nbsp;&nbsp;\[X] 게임 시작
 
 ---
 
@@ -103,48 +103,19 @@
 
 #### 자동차 이름 검증
 
-&nbsp;&nbsp;\[ ] 정상 입력 통과  
-&nbsp;&nbsp;\[ ] 5자 초과 예외 발생  
-&nbsp;&nbsp;\[ ] 빈 문자열 예외 발생  
-&nbsp;&nbsp;\[ ] 중복 이름 예외 발생
+&nbsp;&nbsp;\[X] 정상 입력 통과  
+&nbsp;&nbsp;\[X] 5자 초과 예외 발생  
+&nbsp;&nbsp;\[X] 빈 문자열 예외 발생  
+&nbsp;&nbsp;\[X] 중복 이름 예외 발생
 
 #### 시도 횟수 검증
 
-&nbsp;&nbsp;\[ ] 정상 숫자 통과  
-&nbsp;&nbsp;\[ ] 문자 입력 시 예외 발생  
-&nbsp;&nbsp;\[ ] 0 이하 입력 시 예외 발생
+&nbsp;&nbsp;\[X] 정상 숫자 통과  
+&nbsp;&nbsp;\[X] 문자 입력 시 예외 발생  
+&nbsp;&nbsp;\[X] 0 이하 입력 시 예외 발생
 
 ### Service 테스트
 
-&nbsp;&nbsp;\[ ] 자동차 목록 생성 확인  
-&nbsp;&nbsp;\[ ] 게임 진행 로직 확인  
-&nbsp;&nbsp;\[ ] 우승자 결정 로직 확인
-
----
-
-## 📂 프로젝트 구조
-
-```
-src/main/java/racingcar/
-├── Application.java
-├── controller/
-│   └── RacingController.java
-├── service/
-│   └── RacingService.java
-├── domain/
-│   ├── Car.java
-│   └── Cars.java
-├── dto/
-│   └── CarName.java
-├── infrastructure/
-│   ├── random/
-│   │   ├── RandomNumberGenerator.java
-│   │   └── DefaultRandomNumberGenerator.java
-│   └── io/
-│       ├── Input.java
-│       ├── Output.java
-│       ├── ConsoleInput.java
-│       └── ConsoleOutput.java
-└── validator/
-    └── InputValidator.java
-```
+&nbsp;&nbsp;\[X] 자동차 목록 생성 확인  
+&nbsp;&nbsp;\[X] 게임 진행 로직 확인  
+&nbsp;&nbsp;\[X] 우승자 결정 로직 확인
